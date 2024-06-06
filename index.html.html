@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to eBook Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('background2.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        header {
+            color: #000305;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00060a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #297fb8;
+        }
+
+        footer {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Welcome to the eBook Platform!
+    </header>
+
+    <main>
+        <p>Please select your class:</p>
+
+        <form id="classForm" action="">
+
+            <select id="classSelect" aria-label="Select your class">
+                <option value="1">Class 1</option>
+                <option value="1">Class 2</option>
+                <option value="1">Class 3</option>
+                <option value="1">Class 4</option>
+                <option value="1">Class 5</option>
+                <option value="1">Class 6</option>
+                <option value="1">Class 7</option>
+                <option value="1">Class 8</option>
+                <option value="1">Class 9</option>
+                <option value="10">Class 10</option>
+            </select>
+
+            <button type="button" onclick="redirectToSelectedClass()" aria-label="Go to selected class">Go to Class</button>
+
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2023 eBook Platform. All rights reserved.
+    </footer>
+
+    <script>
+        function redirectToSelectedClass() {
+            var selectedClass = document.getElementById("classSelect").value;
+            if (selectedClass !== "") {
+                if (selectedClass === "10") {
+                    window.location.href = "login.html"; // Redirect to login page for Class 10
+                } else {
+                    window.location.href = "class" + selectedClass + ".html"; // Redirect to the selected class page
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
